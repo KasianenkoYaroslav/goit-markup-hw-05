@@ -20,11 +20,11 @@
       <div class="container-header">
         <nav class="navigation">
           <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span></a>
-            <ul class="list-header list-menu">
-              <li><a class="menu" href="">Студія</a></li>
-              <li><a class="menu" href="./portfolio.html">Портфоліо</a></li>
-              <li><a class="menu" href="">Контакти</a></li>
-            </ul>
+          <ul class="list-header list-menu">
+            <li class="header-menu-links"><a class="menu" href="./index.html">Студія</a></li>
+            <li class="header-menu-links"><a class="menu" href="./portfolio.html">Портфоліо</a></li>
+            <li class="header-menu-links"><a class="menu" href="">Контакти</a></li>
+          </ul>
         </nav>
         <ul class="list-contacts">
           <li class="header-contacts-link"><a href="mail" class="link"><svg class="header-contacts-icons" width="16" height="12">
@@ -40,7 +40,7 @@
       <section class="section hero-section section-background">
         <div class="hero-container">
           <h1 class="hero">Ефективні рішення для вашого бізнесу</h1>
-          <button class="btn-order" type="button"> Замовити послугу</button>
+          <button class="btn-order" type="button" data-modal-open> Замовити послугу</button>
         </div>
       </section>
       <section class="section-advantages">
@@ -236,5 +236,14 @@
         </div> 
       </div>
     </footer>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="modal-close" data-modal-close>
+            <li><a href="#" class="modal-cross"><svg class="close-btn">
+              <use href="./img/icons.svg#icon-Vector"></use></svg></a></li>
+          </button>
+        </div>
+      </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

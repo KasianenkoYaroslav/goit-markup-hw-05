@@ -718,3 +718,54 @@ body{
 .contacts-footer:active{
     color: #2196F3;
 }
+.backdrop{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    transition: opacity 250ms linear, visibility 250ms linear;
+    top: 0;
+}
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0);
+}
+.modal{
+    width: 500px;
+    min-height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    background-color: #FFFFFF;
+    list-style: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 250ms linear;
+}
+.modal-close{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    margin-top: 8px;
+    margin-right: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-btn{
+    width: 11px;
+    height: 11px;
+}
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
