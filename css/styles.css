@@ -81,6 +81,7 @@ body{
 .navigation{
     display: flex;
     align-items: center;
+    transition: color 250ms linear;
 }
 .list-menu{
     text-decoration: none;
@@ -91,6 +92,24 @@ body{
     align-items: center;
     gap: 50px;
     margin-left: 93px;
+    transition: color 250ms linear;
+}
+.list-menu::after{
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    color: var(--btns-links-color);
+    transform: scaleX(0);
+    transition: transform 250ms linear;
+    opacity: 0;
+}
+.menu:hover::after,
+.menu:focus::after{
+    opacity: 1;
 }
 .menu{
     font-size: 14px;
@@ -146,6 +165,7 @@ body{
 }
 .header-contacts-icons{
     margin-right: 10px;
+    color 250ms linear;
 }
 .header-contacts-link:hover{
     fill: var(--btns-links-color);
