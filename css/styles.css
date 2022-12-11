@@ -394,7 +394,7 @@ body{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: background-color 250ms linear, color 250ms linear;
+    transition: background-color 250ms linear, fill 250ms linear;
 }
 .workers-soc-link:hover{
     background-color: var(--btns-links-color);
@@ -629,7 +629,7 @@ body{
     color: #212121;
     cursor: pointer;
     padding: 6px 22px;
-    transition:  background-color 250ms linear,color 250ms linear, border-bottom 250ms linear; 
+    transition:  background-color 250ms linear, color 250ms linear, border-bottom 250ms linear; 
 }
 .portfolio-categories:hover{
     color: #FFFFFF;
@@ -678,7 +678,7 @@ body{
 }
 .project-item:hover .project-descr-overlay{
     transform: translateY(0%);
-    transition: 250ms linear
+    transition: 250ms linear;
 }
 .project-item:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -696,6 +696,7 @@ body{
     padding: 63px 24px 63px 24px;
     height: 100%;
     transform: translateY(100%);
+    transition: 250ms linear;
     background-color: var(--btns-links-color);
 }
 .project-item-thumb{
@@ -738,6 +739,8 @@ body{
     position: fixed;
     transition: opacity 250ms linear, visibility 250ms linear;
     top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .backdrop.is-hidden .modal{
     transform: translate(-50%, -50%) scale(0);
@@ -752,9 +755,6 @@ body{
     background-color: #FFFFFF;
     list-style: none;
     border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: transform 250ms linear;
 }
 .modal-close{
@@ -762,24 +762,64 @@ body{
     height: 30px;
     background-color: transparent;
     border-radius: 50%;
-    position: absolute;
-    right: 0;
-    top: 0;
     cursor: pointer;
-    margin-top: 8px;
-    margin-right: 8px;
+    top: 8px;
+    right: 8px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-.close-btn{
-    width: 11px;
-    height: 11px;
+    position: absolute;
 }
 .is-hidden{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+}
+.modal-heading{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #212121;
+    padding-top: 40px;
+    padding-bottom: 12px;
+}
+.modal-input{
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.field-type{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #757575;
+    padding-bottom: 4px;
+}
+.btn-submit{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    padding: 10px 52px 10px 52px;
+    color: #FFFFFF;
+    background-color: var(--btns-links-color);
 }
